@@ -14,8 +14,16 @@ class ViewController: UIViewController {
     @IBOutlet var letterButtons: [UIButton]!
     var listOfWords = ["swift", "aligator", "bathroom", "bike", "monkey", "football", "pizza", "chicken"]
     let incorrectMovesAllowed = 7
-    var totalWins = 0
-    var totalLosses = 0
+    var totalWins = 0 {
+        didSet {
+            newRound()
+        }
+    }
+    var totalLosses = 0 {
+        didSet {
+            newRound()
+        }
+    }
     var currentGame: Game!
     
     override func viewDidLoad() {
@@ -24,9 +32,20 @@ class ViewController: UIViewController {
         newRound()
     }
     func newRound() {
-        let newWord = listOfWords.removeFirst()
-        currentGame = Game(word: newWord, inccorectMovesRemaining: incorrectMovesAllowed, guessedLetters: [])
-        updateUI()
+        if !listOfWords.isEmpty {
+            let newWord = listOfWords.removeFirst()
+            currentGame = Game(word: newWord, inccorectMovesRemaining: incorrectMovesAllowed, guessedLetters: [])
+            enableLetterButtons(true)
+            updateUI()
+        } else {
+            enableLetterButtons(false)
+        }
+    }
+    
+    func enableLetterButtons(_ enable: Bool){
+        for button in letterButtons {
+            button.isEnabled = enable
+        }
     }
     
     func updateUI() {
@@ -45,7 +64,17 @@ class ViewController: UIViewController {
         let letterString = sender.configuration!.title!
         let letter = Character(letterString.lowercased())
         currentGame.playerGuessedLetter(letter: letter)
-        updateUI()
+        updateGameState()
+    }
+    
+    func updateGameState() {
+        if currentGame.inccorectMovesRemaining == 0 {
+            totalLosses += 1
+        } else if currentGame.word == currentGame.formattedWord {
+            totalWins += 1
+        } else {
+            updateUI()
+        }
     }
     
 
