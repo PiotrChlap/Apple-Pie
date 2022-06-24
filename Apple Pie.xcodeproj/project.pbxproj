@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4300663B286519B700DF50A2 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4300663A286519B700DF50A2 /* Game.swift */; };
 		43012B87286509E900AA5E96 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43012B86286509E900AA5E96 /* AppDelegate.swift */; };
 		43012B89286509E900AA5E96 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43012B88286509E900AA5E96 /* SceneDelegate.swift */; };
 		43012B8B286509E900AA5E96 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43012B8A286509E900AA5E96 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4300663A286519B700DF50A2 /* Game.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		43012B83286509E900AA5E96 /* Apple Pie.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Apple Pie.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		43012B86286509E900AA5E96 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		43012B88286509E900AA5E96 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				43012B86286509E900AA5E96 /* AppDelegate.swift */,
 				43012B88286509E900AA5E96 /* SceneDelegate.swift */,
 				43012B8A286509E900AA5E96 /* ViewController.swift */,
+				4300663A286519B700DF50A2 /* Game.swift */,
 				43012B8C286509E900AA5E96 /* Main.storyboard */,
 				43012B8F286509EB00AA5E96 /* Assets.xcassets */,
 				43012B91286509EB00AA5E96 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				43012B8B286509E900AA5E96 /* ViewController.swift in Sources */,
 				43012B87286509E900AA5E96 /* AppDelegate.swift in Sources */,
 				43012B89286509E900AA5E96 /* SceneDelegate.swift in Sources */,
+				4300663B286519B700DF50A2 /* Game.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -304,7 +308,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Debug;
 		};
@@ -332,7 +336,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 2;
 			};
 			name = Release;
 		};
